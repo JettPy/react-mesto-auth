@@ -92,10 +92,14 @@ function App() {
   };
 
   const handleConfirm = () => { // Обработчик подтверждения удаления карточки
-    api.deleteCard(delitingCard._id).then(() => {
+    api.deleteCard(delitingCard._id)
+    .then(() => {
       setCards(cards.filter((c) => c._id !== delitingCard._id));
+      closeAllPopups();
+    })
+    .catch((error) => {
+      console.log(error);
     });
-    closeAllPopups();
   }
 
   const handleCardClick = (card) => { // Обработчик нажатия на карточку
