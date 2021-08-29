@@ -10,7 +10,7 @@ function PopupWithForm({ title, name, isOpen, buttonText, onClose, children, onS
         <form className="popup__form" name="avatar" onSubmit={onSubmit} noValidate>
           <fieldset className="popup__set">
             {children}
-            <button className="button popup__button" aria-label={buttonText} type="submit">Сохранить</button>
+            <button className="button popup__button" aria-label={buttonText} type="submit">{buttonText}</button>
           </fieldset>
         </form>
       </div>
