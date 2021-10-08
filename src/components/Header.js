@@ -15,10 +15,10 @@ function Header({ email, onSignOut}) {
           <Link to="/sign-up" className="header__link">Регистрация</Link>
         </Route>
         <Route path="/">
-          <div className="header__container">
-            <p className="header__email">{email}</p>
-            <Link to="/sign-in" className="header__link" onClick={onSignOut}>Выйти</Link>
-          </div>
+          <ul className="header__container">
+            <li><p className="header__email">{email}</p></li>
+            <li><Link to="/sign-in" className="header__link" onClick={onSignOut}>Выйти</Link></li>
+          </ul>
         </Route>
       </Switch>
     </header>
